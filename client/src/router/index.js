@@ -18,9 +18,19 @@ import BlogIndex from '@/components/Blogs/Index'
 import BlogCreate from '@/components/Blogs/CreateBlog'
 import BlogEdit from '@/components/Blogs/EditBlog'
 import BlogShow from '@/components/Blogs/ShowBlog'
+
 // Upload Testing
 import Upload from '@/components/Utils/Upload'
 
+// Front
+import FrontIndex from '@/components/Fronts/Index'
+
+import FrontShow from '@/components/Fronts/ShowBlog'
+//Booking
+import BookingCreate from '@/components/Booking/CreateBooking'
+import BookingIndex from '@/components/Booking/Index'
+import BookingShow from '@/components/Booking/ShowBooking'
+import BookingEdit from '@/components/Booking/EditBooking'
 
 Vue.use(Router)
 
@@ -28,7 +38,7 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/Users',
+      path: '/users',
       name: 'users',
       component: UserIndex
     },
@@ -55,30 +65,31 @@ export default new Router({
     },
     // blogs
     {
-    path: '/blogs',
-    name: 'blogs',
-    component: BlogIndex
+      path: '/blogs',
+      name: 'blogs',
+      component: BlogIndex
     },
     {
-    path: '/blog/create',
-    name: 'blogs-create',
-    component: BlogCreate
+      path: '/blog/create',
+      name: 'blogs-create',
+      component: BlogCreate
     },
     {
-    path: '/blog/edit/:blogId',
-    name: 'blog-edit',
-    component: BlogEdit
+      path: '/blog/edit/:blogId',
+      name: 'blog-edit',
+      component: BlogEdit
     },
     {
-    path: '/blog/:blogId',
-    name: 'blog',
-    component: BlogShow
+      path: '/blog/:blogId',
+      name: 'blog',
+      component: BlogShow
     },
+   
     // comments
     {
-    path: '/comments',
-    name: 'comments',
-    component: CommentIndex
+      path: '/comments',
+      name: 'comments',
+      component: CommentIndex
     },
     // upload testing
     {
@@ -86,5 +97,43 @@ export default new Router({
       name: 'upload',
       component: Upload
     },
+    // front
+    {
+      path: '/front',
+      name: 'front',
+      component: FrontIndex
+    },
+    {
+      path: '/front/read/:blogId',
+      name: 'front-read',
+      component: FrontShow
+    },
+    //จอง
+    {
+      path: '/booking',
+      name: 'booking',
+      component: BookingCreate
+    },
+    {
+      path: '/booking',
+      name: 'booking',
+      component: BookingCreate
+    },
+    {
+      path: '/bookings',
+      name: 'bookings',
+      component: BookingIndex
+    },
+    {
+      path: '/booking/:bookingId',
+      name: 'booking',
+      component: BookingShow
+    },
+    {
+      path: '/booking/edit/:bookingId',
+      name: 'booking-edit',
+      component: BookingEdit
+    },
+   
   ]
 })

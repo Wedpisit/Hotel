@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Phonnaphat Homruen",
+  "author": "Wedpisit Meesiriphan",
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
@@ -25,6 +25,6 @@
     "vue-ckeditor2": "^2.1.5"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.6"
   }
 }

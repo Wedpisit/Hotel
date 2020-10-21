@@ -1,13 +1,13 @@
 <template>
-    <div>
-        <h1>User Login</h1>
+    <center><main-header navsel="back"></main-header><div>
+        <h1>admin Login</h1>
         <form v-on:submit.prevent="onLogin">
-            <p>Username: <input type="text" v-model="email" /></p>
-            <p>Password: <input type="password" v-model="password" /></p>
-            <p><button type="submit">Login</button></p>
+            <p>Username: <input type="text" class="form-control" style="width: 30%; " v-model="email" /></p>
+            <p>Password: <input type="password" class="form-control" style="width: 30%; " v-model="password" /></p>
+            <p> <button type="submit" class="btn btn-outline-info">Login</button></p>
             <div class="error" v-if="error">{{error}}</div>
         </form>
-    </div>
+    </div></center>
 </template>
 <script>
 import AuthenService from '@/services/AuthenService'
@@ -47,6 +47,6 @@ export default {
 </script>
 <style scoped>
     .error {
-        color:red;
+        color :#79994a;
     }
 </style>
